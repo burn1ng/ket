@@ -1,0 +1,30 @@
+{
+  "name": "test task 4tegroup",
+  "version": "1.0.0",
+  "description": "test task for 4tegroup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/burn1ng/project.git"
+  },
+  "author": "Andrei Dushkou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burn1ng/ket/issues"
+  },
+  "homepage": "https://github.com/burn1ng/ket#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-watch": "^4.3.8",
+    "imagemin-pngquant": "^5.0.0",
+    "rimraf": "^2.5.3"
+  }
+}
