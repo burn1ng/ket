@@ -1,4 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
 * {
 	padding:0;
 	margin:0;
+	box-sizing: border-box;
+}
+
+$cyan: #19e0fc;
+$smoke: #3f4244;
+$lightSmoke: #929ba0;
+$backGray: #f7f7f7;
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+	color: $smoke;
+}
+
+a {
+	text-decoration: none;
+	color: $smoke;
+}
+ul {
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* ########## HEADER ########## */
+header {
+	background: #fff;
+}
+.header-wrapper {
+	max-width: 1170px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.header-logo {
+	padding: 30px 0;
+}
+
+.header-logo a {
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 0.5em;
+}
+img.logo {
+	margin-left: 20px;
+}
+
+ul li.menu-item {
+	display: inline-block;
+	list-style: none;
+	text-transform: uppercase;
+	& a {
+		display: block;
+		padding: 40px 15px;
+		font-weight: 300;
+		border-bottom: 2px solid transparent;
+	}
+	&:hover {
+		& a {
+			color: $cyan;
+			border-bottom: 2px solid $cyan;
+		}
+		
+
+	}
+}
+
+/* ########## SERVICES ########## */
+
+.services {
+	background-color: $backGray;
+}
+.services-wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.fully-responsive {
+
+}
+.fully-tabs {
+	display: flex;
+	padding: 55px 100px 85px;
+	text-transform: uppercase;
+	& .tab-item {
+		position: relative;
+		padding: 16px 0;
+		border: 1px solid $lightSmoke;
+		flex-grow: 1;
+		text-align: center;
+		font-weight: 400;
+		&:hover {
+			&:after {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				width: 15px;
+				height: 15px;
+				border-bottom: 1px solid $cyan;
+				border-right: 1px solid $cyan;
+				transform: rotate(45deg);
+				bottom: -9px;
+    			left: calc(50% - 10px);
+    			background: $backGray;
+
+
+
+			}
+			border-color: $cyan;
+		};
+	}
 }

@@ -13,9 +13,9 @@
   "author": "Andrei Dushkou",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/burn1ng/ket/issues"
+    "url": "https://github.com/burn1ng/project/issues"
   },
-  "homepage": "https://github.com/burn1ng/ket#readme",
+  "homepage": "https://github.com/burn1ng/project#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
