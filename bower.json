@@ -9,12 +9,14 @@
   "homepage": "",
   "ignore": [
     "node_modules",
-    "bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
     "normalize.css": "*",
     "jquery": "2.*"
+  },
+  "devDependencies": {
+    "Swiper": "swiper#^3.3.1"
   }
 }
