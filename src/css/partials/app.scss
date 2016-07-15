@@ -13,6 +13,7 @@ $lightSmoke: #929ba0;
 $backGray: #f7f7f7;
 $imagesBack: #252726;
 $statsBack: #62767f;
+$contactsBack: #131316;
 
 body {
 	font-family: 'Raleway', sans-serif;
@@ -125,7 +126,7 @@ ul li.menu-item {
 	position: relative;
 	display: flex;
 	flex-grow: 1;
-	width: 50%;
+	/*width: 50%;*/
 }
 .white-phone {
 	position: absolute;
@@ -290,9 +291,9 @@ ul li.menu-item {
 			border: 1px solid transparent;
 			text-transform: uppercase;
 			cursor: pointer;
-			/*&:hover {
+			&:hover {
 				border: 1px solid $cyan;
-			}*/
+			}
 		}
 		& li.portfolio-menu-item.active {
 			border: 1px solid $cyan;
@@ -306,7 +307,7 @@ ul li.menu-item {
 	width: 470px;
 }
 
-.image-wrapper {
+.image-container {
 	margin-bottom:60px;
 	& .image-card {
 	background: white;
@@ -382,30 +383,257 @@ ul li.menu-item {
 		}		 
 	}
 }
-
+/* ########## Stats ########## */
 .stats {
 	background: $statsBack;
-	width: 100%;
-	padding: 60px 0;
+	padding: 60px 0 40px;
 	& .stats-wrapper {
 		max-width: 1170px;
 		margin: 0 auto;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		& div[class*="stats-item-"] {
-			flex-grow: 1;
-			max-width: 25%;
-			color: white;
-			& h3 {
-				font-size: 40px;
-				font-weight: 400;
-				margin: 40px 0 20px
+		& .stats-container {
+			display: flex;
+			justify-content: space-around;
+			align-items: flex-end;
+			flex-wrap: wrap;
+			text-align: center;
+			& .stats-item {
+				flex-grow: 1;
+				max-width: 25%;
+				min-width: 175px;
+				color: white;
+				& h2 {
+					font-size: 40px;
+					font-weight: 400;
+					margin: 40px 0 20px;
+				}
+				& p {
+					font-size: 13px;
+					margin-bottom: 20px;
+				}
 			}
-			& p {
-				font-size: 13px;
+		}
+	}	
+}
+
+/* ########## Contacts ########## */
+.contacts {
+	background: $contactsBack;
+	width:100%;
+	color:white;
+	padding: 60px 0;
+}
+.contacts-wrapper {
+	max-width: 770px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	& h2 {
+		font-size: 40px;
+		font-weight: 400;
+		margin: 30px 0;
+		position: relative;
+		&:after {
+			position: absolute;			
+			content: '';
+			bottom: -30px;
+			left: 15%;
+			width: 70%;
+			height: 2px;
+			background: $cyan;
+		}
+	}
+	& p {
+		margin: 30px 0;
+		font-size: 13px;
+	}
+	& form {
+		margin: 50px 0;
+		border: 0 none;
+		width: 100%;		
+		& ul {
+			list-style:none;
+			& li {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 10px;
+				& .input-border, & .text-border {
+					position: relative;
+					border-bottom: 2px solid white;
+					flex-grow: 1;
+					&:first-child {
+						margin-right:30px;
+					}
+					&:after, &:before {
+				    	position: absolute;
+				    	content: '';
+				    	display: inline-block;
+				    	bottom: 0;
+				    	width: 2px;
+				    	background: white;
+				    	height: 10px;
+				    }
+				    &:after {
+				    	right: 0;
+				    }
+				    &:before {
+				    	left:0;
+				    }
+				}
+				& .text-border:first-child {
+					margin-right: 0;
+				}
+				& input, textarea {					
+					outline: none;
+		    		display: block;
+					padding: 20px;
+				    border: none;				    
+				    background: transparent;
+				    font-size: 15px;
+				    font-family: 'Raleway';
+				    color: white;
+				}
+				& input::-webkit-input-placeholder, & textarea::-webkit-input-placeholder {
+    				color: white;
+    				text-shadow: none;
+				}
+				&:last-child {
+					border: 1px solid $cyan;
+					margin:35px 0;
+					float: right;
+				}
+
 			}
 		}
 	}
+	& p.last-words {
+		font-size: 15px;
+		margin-top: 50px;
+		& a {
+			color: $cyan;
+		}
+	}
+}
+
+/*########## media queries ##########*/
+
+@media (max-width: 1170px) {
+	div[class*="wrapper"] {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.white-phone img, .black-phone img {
+		width: 90%;
+	}
+	.white-phone {
+		left: 235px;
+	}
+	.black-phone {
+		left: 80px;
+	}
+	.portfolio-wrapper, .swiper-wrapper {
+		padding-right: 0!important;
+		padding-left: 0!important;
+	}
+	.description {
+		padding-right: 20px!important;
+		padding-left: 20px!important;
+	}
+	.timeline {
+		padding: 170px 0 45px;
+	}
+}
+
+@media (max-width: 920px) {
+	.white-phone img, .black-phone img {
+		width: 80%;
+	}
+	.white-phone {
+		left: 215px;
+	}
+	.black-phone {
+		left: 60px;
+	}
+	.timeline {
+		padding: 130px 0 45px;
+	}
+}
+@media (max-width: 850px) {
+	.white-phone img, .black-phone img {
+		width: 75%;
+	}
+	.timeline {
+		padding: 85px 0 45px;
+	}
+}
+@media (max-width: 800px) {
 	
+	.top-menu {
+		padding: 25px 50px 40px;
+	}
+	.white-phone img {
+		width: 217px;
+	}
+	.black-phone img {
+		width: 252px;
+	}
+	.phones {
+		margin: 0 auto;
+	}
+	.white-phone {
+		left: calc(50% - 50px);
+	}
+	.black-phone {
+		left: calc(50% - 165px);
+	}
+	.hero-content {
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		align-items: center;
+		margin: 500px 20px 0;
+	}
+}
+
+@media (max-width: 720px) {
+	.stats-item > h2 {
+		margin: 20px 0 10px!important;
+		transition-duration: 2s;
+	}
+}
+@media (max-width: 620px) {
+	.header-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+	.top-menu {
+		padding: 25px 50px 40px;
+		transition-duration: 2s;
+	}
+	.portfolio-wrapper ul li.portfolio-menu-item {
+		padding: 20px;
+	}
+}
+@media (max-width: 520px) {
+	.portfolio-wrapper ul li.portfolio-menu-item {
+		padding: 10px;
+	}
+	.contacts-wrapper form ul li {
+		flex-direction: column;
+	}
+	.contacts-wrapper form ul li .input-border:first-child {
+		margin-right: 0;
+	}
+}
+@media (max-width: 440px) {
+	.header-wrapper ul li.menu-item a {
+		padding: 20px 5px;
+	}
+
+	.portfolio-wrapper ul li.portfolio-menu-item {
+		padding: 10px;
+		font-size: 12px;
+	}
 }

@@ -6,8 +6,5 @@ $(document).ready(function () {
         centeredSlides: true
     });  
 
-    $('.portfolio-menu-item').hover(
-       function(){ $(this).addClass('active') },
-       function(){ $(this).removeClass('active') }
-	)
+
 });
